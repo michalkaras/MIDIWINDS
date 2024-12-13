@@ -1,1 +1,1 @@
-# Electronic midi wind (ewi) musical instrument project.
+# Electronic midi-wind CONTROLLER (ewi) musical instrument project.
