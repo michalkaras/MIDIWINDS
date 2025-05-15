@@ -1,1 +1,1 @@
-# midiWIND controller musical instrument project
+# midiWIND musical MIDI instrument project
