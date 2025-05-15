@@ -362,9 +362,9 @@ void SendNoteInfo() {
       lastPINchangetime[i] = currentMillis;
       if (state) {
         PIN_pitch_state[i] = pitch;
-        BLEMidiServer.noteOn(0, pitch, 112); // Note on for channel 1                          
+        BLEMidiServer.noteOn(0, pitch, EXP1); // Note on for channel 1                          
         if (aux1Pressed) {
-          BLEMidiServer.noteOn(1, pitch, 112); // Note on for channel 2 
+          BLEMidiServer.noteOn(1, pitch, EXP2); // Note on for channel 2 
         }
       } else {
         BLEMidiServer.noteOff(0, PIN_pitch_state[i], 127); // Note off for channel 1  
