@@ -1,1 +1,1 @@
-# Electronic midi-wind CONTROLLER musical instrument project.
+# midiWIND controller musical instrument project.
