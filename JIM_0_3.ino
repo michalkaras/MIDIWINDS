@@ -3,6 +3,7 @@ The code works with library versions:
 NimBLE-Arduino 1.4.3 and ESP32-BLE-MIDI 0.3.2
 
 board: ESP32-S3
+breath: XGZP190 sensor
 display: OLED I2C 128x32
 Michal Karas 
 https://karas-midi-woodwinds.webnode.cz/
