@@ -101,15 +101,19 @@ void connected();
 void onControlChange(uint8_t channel, uint8_t controller, uint8_t value, uint16_t timestamp)
 {
     Serial.printf("Received control change : channel %d, controller %d, value %d (timestamp %dms)\n", channel, controller, value, timestamp);
-}
-void connected(){
 
-  if (BLEMidiServer.isConnected()) {
-  BLEMidiServer.controlChange(0, 26, scale_index);
-  }
-  if (BLEMidiServer.isConnected()) {
-  BLEMidiServer.controlChange(0, 32, instrument_index);
-  }
+    // Scale change (controller 26)
+    if(controller == 26 && value >= 0 && value <= 11) {
+        scale_index = value;
+        Serial.printf("Scale changed to %d\n", scale_index);
+        UpdateDisplay();
+    }
+    // Instrument change (controller 32)
+    else if(controller == 32 && value >= 0 && value <= 19) {
+        instrument_index = value;
+        Serial.printf("Instrument changed to %d\n", instrument_index);
+        UpdateDisplay();
+    }
 }
 
 //----------------------------------------------------------------
